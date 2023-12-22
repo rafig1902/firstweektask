@@ -162,12 +162,16 @@ const netice = arr3.filter((item,index) => typeof item === 'number')
 console.log(netice);
 
 // 2.Show only true values
-const netice1 = arr3.filter((item,index) => typeof item === 'boolean' &&  item === true)
-console.log(netice1);
+const bic = ["9", 10, 100, 11, 'true', 'undefined', true, null, 'something', false];
+
+const trueValues = arr3.filter(item => item);
+
+console.log(trueValues);
 // 2.Show only false values
 
-const netice2 = arr3.filter((item,index) => typeof item === 'boolean' &&  item === false)
-console.log(netice2);
+const falseValues = arr3.filter(item => !item);
+
+console.log(falseValues);
 // 4.Show only strings
 const netice15 = arr3.filter((item,index) => typeof item === 'string')
 console.log(netice15);
@@ -206,18 +210,12 @@ console.log(newarray3);
 const newarray4 = newarray3.map((item,index) => item + ' is string')
 console.log(newarray4);
 
-const newarray33 = arr4.filter((item,index) => typeof item == 'boolean' && item == false)
+const newarray33 = arr4.filter((item,index) => item = !item )
 console.log(newarray33);
 const newarray55 = newarray33.map((item,index) => item + ' is a falsy values')
 console.log(newarray55);
 
-const newarray66 = arr4.filter((item,index) =>  item == null)
-console.log(newarray66);
-
-const newarray77 = newarray66.map((item,index) => item + ' is falsy values')
-console.log(newarray77);
-
-const finalarray = newarray1 + " " + newarray4 + " " + newarray55 + " " + newarray77
+const finalarray = newarray1 + " " + newarray4 + " " + newarray55 
 console.log(finalarray);
 
 
@@ -230,7 +228,7 @@ console.log(summ);
 
 // 3.Count only the values that are true
 
-const array = arr4.filter((item,index) => typeof item == 'boolean' && item == true)
+const array = arr4.filter((item,index) => item = item)
 console.log(array);
 
 // 4.Count only the values that are string
@@ -239,10 +237,9 @@ console.log(stringarray);
 
 // 5.Count only the values that are false
 
-const false1 = arr4.filter((item,index) => typeof item == 'boolean' && item == false)
+const false1 = arr4.filter((item,index) => item = !item)
 console.log(false1);
-const false2 = arr4.filter((item,index) =>  item == null)
-console.log(false2);
+
 
 ////////////// TASK 10 //////////////
 // 1.Create a object add your name, surname, age and city.
@@ -269,4 +266,14 @@ console.log(obj.info.gender);
 console.log(obj.info.loc.city);
 // 5.Console uni name
 console.log(obj.info.loc.education);
+
+
+
+
+
+
+
+
+
+
 
